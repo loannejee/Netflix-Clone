@@ -11,6 +11,7 @@ function Banner() {
     useEffect(() => {
         // internal function:
         async function fetchData() {
+            // local axios base url concatenates with the fetchNetflixOriginals url
             const request = await axios.get(requests.fetchNetflixOriginals);
             setMovie(
                 request.data.results[
