@@ -32,6 +32,21 @@ function Nav() {
                     alt=''
                 />
 
+                <div className='nav_links'>
+                    <div className='nav_link'>Home</div>
+                    <div className='nav_link'>TV Shows</div>
+                    <div className='nav_link'>Movies</div>
+                    <div className='nav_link'>New & Popular</div>
+                    <div className='nav_link'>My List</div>
+                </div>
+
+
+                <img
+                    className='nav_searchGlasses'
+                    src='https://www.queryly.com/images/whitesearchicon.png'
+                    alt=''
+                />
+
                 <img
                     className='nav_avatar'
                     src='https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png'
