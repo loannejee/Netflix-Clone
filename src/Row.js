@@ -30,9 +30,9 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
             <div className='row_posters'>
                 {
                     movies.map((movie) => (
-                        // render if 
-                        isLargeRow && movie.poster_path ||
-                        (!isLargeRow && movie.backdrop_path && (
+
+                        ((isLargeRow && movie.poster_path) ||
+                            (!isLargeRow && movie.backdrop_path)) && (
                             <img
                                 // if isLargeRow is true, the className shall be "row_posterLarge" instead
                                 className={`row_poster ${isLargeRow && "row_posterLarge"}`}
@@ -43,7 +43,6 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
                     ))
                 }
             </div>
-
         </div>
     )
 }

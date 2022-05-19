@@ -19,38 +19,31 @@ function HomeScreen() {
             />
             <Row 
             title="Trending Now"
-            fetchUrl={requests.fetchTrending}
-            isLargeRow           
+            fetchUrl={requests.fetchTrending}          
             />
             <Row 
             title="Top Rated"
-            fetchUrl={requests.fetchTopRated}
-            isLargeRow           
+            fetchUrl={requests.fetchTopRated}          
             />
             <Row 
             title="Action Movies"
-            fetchUrl={requests.fetchActionMovies}
-            isLargeRow           
+            fetchUrl={requests.fetchActionMovies}         
             />
             <Row 
             title="Comedy Movies"
-            fetchUrl={requests.fetchComedyMovies}
-            isLargeRow           
+            fetchUrl={requests.fetchComedyMovies}         
             />
             <Row 
             title="Horror Movies"
-            fetchUrl={requests.fetchHorrorMovies}
-            isLargeRow           
+            fetchUrl={requests.fetchHorrorMovies}        
             />
             <Row 
             title="Romance Movies"
-            fetchUrl={requests.fetchRomanceMovies}
-            isLargeRow           
+            fetchUrl={requests.fetchRomanceMovies}        
             />
             <Row 
             title="Documentaries"
-            fetchUrl={requests.fetchDocumentaries}
-            isLargeRow           
+            fetchUrl={requests.fetchDocumentaries}       
             />
         </div>
     )
