@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import HomeScreen from './HomeScreen';
+import HomeScreen from './screens/HomeScreen';
 import {
   BrowserRouter as Router,
   // In react-router-dom v6, "Switch" is replaced by routes "Routes"
