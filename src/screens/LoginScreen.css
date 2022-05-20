@@ -1,0 +1,99 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginScreen {
+    position: relative;
+    height: 100%;
+    background: url(https://browsecat.net/sites/default/files/netflix-background-128505-385456-9916359.png);
+    background-size: cover;
+}
+
+.loginScreen_body > h1 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+
+.loginScreen_body > h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.loginScreen_body > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.loginScreen_body {
+    position: absolute;
+    top: 30%;
+    /* z-index to prioritize body content on the top overlay */
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.loginScreen_gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    /* 40% opaque for background overlay look*/
+    background: rgba(0, 0, 0, 0.4);
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%,
+    );
+}
+
+.loginScreen_logo {
+    position: fixed;
+    width: 110px;
+    left: 0;
+    object-fit: contain;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.loginScreen_button {
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+}
+
+/* Targeting the input child inside the form: */
+.loginScreen_input > form > input {
+    padding: 10px;
+    outline-width: 0;
+    height: 30px;
+    /* setting the form to be reactive: */
+    width: 30%;
+    border: none;
+    /* setting max width so it doesn't take up across the screen: */
+    max-width: 600px;
+}
+
+.loginScreen_input {
+    margin: 20px;
+}
+
+.loginScreen_getStarted {
+    cursor: pointer;
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e50914;
+    font-weight: 600;
+    border: none;
+}
+
