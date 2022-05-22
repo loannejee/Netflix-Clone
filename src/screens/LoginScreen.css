@@ -6,7 +6,6 @@
     position: relative;
     height: 100%;
     background: url(https://browsecat.net/sites/default/files/netflix-background-128505-385456-9916359.png);
-    background-size: cover;
 }
 
 .loginScreen_body > h1 {
@@ -28,11 +27,16 @@
 .loginScreen_body {
     position: absolute;
     top: 30%;
-    /* z-index to prioritize body content on the top overlay */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* z-index to prioritize body content on the top overlay: */
     z-index: 1;
     color: white;
     padding: 20px;
-    text-align: center;
+    /* gives the browser a new bounding box for the block: */
+    left: 0;
+    right: 0;
 }
 
 .loginScreen_gradient {
@@ -41,12 +45,6 @@
     height: 100vh;
     /* 40% opaque for background overlay look*/
     background: rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.8) 0,
-        rgba(0, 0, 0, 0) 60%,
-        rgba(0, 0, 0, 0.8) 100%,
-    );
 }
 
 .loginScreen_logo {
