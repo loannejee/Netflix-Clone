@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -9,8 +9,24 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import { auth } from './firebase'
 
 function App() {
+  const user = null;
+
+  // implement persistence 
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        // Logged in
+      } else {
+        // Logged out
+      }
+    });
+
+    // prevent duplicating data stored in the local storage
+    return unsubscribe
+  }, []);
   return (
     <div className="app">
       <Router>
@@ -18,8 +34,8 @@ function App() {
         <Routes>
           {/* You also need to update the Route declaration: */}
           {/* <Route path="/" component={HomeScreen} /> */}
-          <Route path="/" exact element={<HomeScreen/>} />
-          <Route path="/login" element={<LoginScreen/>} />
+          <Route path="/" exact element={<HomeScreen />} />
+          <Route path="/login" element={<LoginScreen />} />
         </Routes>
       </Router>
     </div>
