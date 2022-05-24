@@ -10,10 +10,15 @@ function SignInScreen() {
     // to prevent form from auto refreshing when clicking the buttons:
     const register = (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+
+        let email = emailRef.current.value
+        let password = passwordRef.current.value
+
+        createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                console.log(user)
             })
             .catch((error) => {
                 alert(error.message)
@@ -22,10 +27,15 @@ function SignInScreen() {
 
     const signIn = (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
+        
+        let email = emailRef.current.value
+        let password = passwordRef.current.value
+
+        signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                console.log(user)
             })
             .catch((error) => {
                 alert(error.message)
