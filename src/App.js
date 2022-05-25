@@ -39,7 +39,7 @@ function App() {
 
     // prevent data duplication stored in the local storage:
     return unsubscribe
-  });
+  }, []);
 
   return (
     <div className="app">
