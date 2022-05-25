@@ -33,13 +33,15 @@ function App() {
         );
       } else {
         // Logged out
-        dispatch(logout);
+        // This will reset the redux state
+        dispatch(logout());
       }
     });
 
     // prevent data duplication stored in the local storage:
     return unsubscribe
-  }, []);
+    // this useEffect is dependent on dispatch login to see if user is logged in
+  }, [dispatch]);
 
   return (
     <div className="app">
@@ -51,9 +53,8 @@ function App() {
             <Routes>
               {/* You also need to update the Route declaration: */}
               {/* <Route path="/" component={HomeScreen} /> */}
-              <Route path="/" element={<HomeScreen />}>
-                <Route path="/profile" element={<ProfileScreen />} />
-              </Route>
+              <Route exact path="/" element={<HomeScreen />} />
+              <Route path="/profile" element={<ProfileScreen />} />
             </Routes>
           )
         }
