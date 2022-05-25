@@ -36,6 +36,7 @@ function SignInScreen() {
                 // Signed in 
                 const user = userCredential.user;
                 console.log(user)
+                console.log("You're logged in!")
             })
             .catch((error) => {
                 alert(error.message)
