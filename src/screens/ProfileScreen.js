@@ -4,6 +4,7 @@ import { selectUser } from '../features/userSlice';
 import { auth } from '../firebase';
 import Nav from '../Nav';
 import './ProfileScreen.css';
+import PlansScreen from './PlansScreen';
 
 function ProfileScreen() {
   const user = useSelector(selectUser)
@@ -24,6 +25,7 @@ function ProfileScreen() {
 
             <div className='profileScreen_plans'>
               <h3>Plans</h3>
+              <PlansScreen />
               <button
                 // this will trigger auth.onAuthStateChanged
                 onClick={() => auth.signOut()}
