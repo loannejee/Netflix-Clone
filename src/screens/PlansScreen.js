@@ -5,9 +5,11 @@ import db from '../firebase';
 import { useSelector } from 'react-redux';
 // This refers to the user logged in in the current state:
 import { selectUser } from '../features/userSlice';
+import { loadStripe } from '@stripe/stripe-js';
 
 function PlansScreen() {
   const [products, setProducts] = useState([]);
+  // Pull the user from the redux store:
   const user = useSelector(selectUser);
 
   useEffect(() => {
