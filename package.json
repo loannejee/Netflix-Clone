@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
+    "@stripe/stripe-js": "^1.31.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
@@ -43,6 +44,9 @@
     ]
   },
   "react-dotenv": {
-    "whitelist": ["FIREBASE_KEY", "TMDB_KEY"]
+    "whitelist": [
+      "FIREBASE_KEY",
+      "TMDB_KEY"
+    ]
   }
 }
