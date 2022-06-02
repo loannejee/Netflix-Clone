@@ -1,4 +1,6 @@
 // https://www.npmjs.com/package/react-dotenv
+// REMEMBER: add new keys to package.json; refer to link above ^; You also need to re-launch the localhost ---> npm start
+
 // Note: firebase.js needs to be in the src folder
 import env from "react-dotenv";
 import { initializeApp } from "firebase/app";
