@@ -46,7 +46,9 @@
   "react-dotenv": {
     "whitelist": [
       "FIREBASE_KEY",
-      "TMDB_KEY"
+      "TMDB_KEY",
+      "STRIPE_PUBLISHER_KEY",
+      "TEST_KEY"
     ]
   }
 }

@@ -64,10 +64,12 @@ function PlansScreen() {
 
     console.log(">>>", docRef)
 
+    // onSnapshot v9 syntax:
     const unsub = onSnapshot(doc(db, `customers/${user.uid}/checkout_sessions`, `${docRef.id}`), async (snap) => {
       console.log("Current data: ", snap.data());
 
       const { error, sessionId } = snap.data();
+
       if (error) {
         // Show an error to your customer and 
         // inspect your Cloud Function logs in the firebase console.
