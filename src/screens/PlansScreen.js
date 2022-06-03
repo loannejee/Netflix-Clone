@@ -42,14 +42,11 @@ function PlansScreen() {
             priceData: priceDoc.data(),
           }
         });
-
         setProducts(products);
-
       });
     })
       // for invoking?
       ();
-
   }, []);
 
   useEffect(() => {
@@ -59,8 +56,6 @@ function PlansScreen() {
 
       querySnapshot.forEach(async (subscription) => {
 
-
-       
         // need to test this out:
         setSubscription({
           role: subscription.data().role,
@@ -70,7 +65,6 @@ function PlansScreen() {
 
       });
     })
-
       ()
   }, [])
 
@@ -84,8 +78,6 @@ function PlansScreen() {
       success_url: window.location.origin,
       cancel_url: window.location.origin,
     });
-
-    console.log(">>>", docRef)
 
     // onSnapshot v9 syntax:
     const unsub = onSnapshot(doc(db, `customers/${user.uid}/checkout_sessions`, `${docRef.id}`), async (snap) => {
@@ -107,105 +99,41 @@ function PlansScreen() {
         stripe.redirectToCheckout({ sessionId });
       }
     });
-
-
-
-
-
-    // const checkOutCollection = collection(db, "customers");
-    // const checkOutSnapshot = checkOutCollection.getDocs();
-
-    // const querySnapshot = await getDocs(customersRef);
-    // querySnapshot.forEach((doc) => {
-    //   // doc.data() is never undefined for query doc snapshots
-    //   console.log(doc.id, " => ", doc.data());
-    // });
-
-    // await setDoc(doc(db, "customers", user.uid, "checkout_sessions", "123"), {
-    //   test: doc(db, "customers", "123"),
-    // });
-
-    // setDoc(customerRef, {
-    //   price: priceId,
-    //   // This url is for redirecting to after successful purchase:
-    //   success_url: window.location.origin,
-    //   cancel_url: window.location.origin,
-    // });
-
-    // await setDoc(doc(db, "customers", user.uid, "checkout_sessions", customerRef.id), {
-    //   price: priceId,
-    //   // This url is for redirecting to after successful purchase:
-    //   // success_url: window.location.origin,
-    //   // cancel_url: window.location.origin,
-    // });
-
-    // customerRef.onSnapshot(async (snap) => {
-    //   const { error, sessionId } = snap.data();
-
-    //   if (error) {
-    //     // Show an error to your customer and 
-    //     // inspect your Cloud Function logs in the firebase console.
-    //     alert(`An error occurred: ${error.message}`);
-    //   }
-
-    //   if (sessionId) {
-    //     // We have a session, let's redirect to Checkout
-    //     // Init Stripe
-    //     const stripe = await loadStripe(env.STRIPE_PUBLISHER_KEY);
-    //     console.log("Check out stripe built-in functions!", stripe)
-    //     stripe.redirectToCheckout({ sessionId });
-    //   }
-    // })
-
-
-    // const customerSnapshot = onSnapshot(customerRef, async (snap) => {
-    //   console.log("Current data: ", snap.data());
-    //   const { error, sessionId } = snap.data();
-
-    //   if (error) {
-    //     // Show an error to your customer and 
-    //     // inspect your Cloud Function logs in the firebase console.
-    //     alert(`An error occurred: ${error.message}`);
-    //   }
-
-    //   if (sessionId) {
-    //     // We have a session, let's redirect to Checkout
-    //     // Init Stripe
-    //     const stripe = await loadStripe(env.STRIPE_PUBLISHER_KEY);
-    //     console.log("Check out stripe built-in functions!", stripe)
-    //     stripe.redirectToCheckout({ sessionId });
-    //   }
-    // });
-
-
-
-
-
   };
 
   return (
     <div className='plansScreen'>
+      {
+        subscription && <p style={{ paddingTop: "1rem" }}>Renewal Date: {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>
+      }
 
       { // Convert products from object to array. Then map each key/value pair in the array to create divs and buttons for each plan:
         Object.entries(products).map(([productId, productData]) => {
           // TODO: add some logic to check if the user's subscription is active...
+          // If productData.name is defined, lowercase it and check if it includes role (basic, standard, or premium)
+          const isCurrentPackage = productData.name?.toLowerCase().includes(subscription?.role)
+
           return (
-            <div className='plansScreen_plan' key={`keyid_${productId}`}>
+            <div
+              key={`keyid_${productId}`}
+              className={`${isCurrentPackage && 'plansScreen_plan--disabled'} plansScreen_plan`}>
 
               <div className='plansScreen_info'>
                 <h5>{productData.name}</h5>
                 <h6>{productData.description}</h6>
               </div>
 
-              <button onClick={() => loadCheckout(productData.prices.priceId)}>Subscribe</button>
+              {/* only if isCurrentPackage is false (meaning there is no product/package), then you can click on subscribe and invoke loadCheckout */}
+              <button onClick={() => !isCurrentPackage && loadCheckout(productData.prices.priceId)}>
+                {isCurrentPackage ? 'Current Package' : 'Subscribe'}
+              </button>
 
             </div>
-          )
-
+          );
         })
       }
     </div>
-  )
+  );
 }
 
 export default PlansScreen
