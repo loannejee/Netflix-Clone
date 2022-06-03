@@ -13,6 +13,7 @@ function PlansScreen() {
   const [products, setProducts] = useState([]);
   // Pull the user from the redux store:
   const user = useSelector(selectUser);
+  const [subscription, setSubscription] = useState(null);
 
   useEffect(() => {
     (async () => {
@@ -50,6 +51,28 @@ function PlansScreen() {
       ();
 
   }, []);
+
+  useEffect(() => {
+    (async () => {
+      const customerRef = collection(db, `customers/${user.uid}/subscriptions`);
+      const querySnapshot = await getDocs(customerRef);
+
+      querySnapshot.forEach(async (subscription) => {
+
+
+       
+        // need to test this out:
+        setSubscription({
+          role: subscription.data().role,
+          current_period_end: subscription.data().current_period_end.seconds,
+          current_period_start: subscription.data().current_period_start.seconds
+        });
+
+      });
+    })
+
+      ()
+  }, [])
 
   const loadCheckout = async (priceId) => {
     // To create or overwrite a single document, use the set() method:
