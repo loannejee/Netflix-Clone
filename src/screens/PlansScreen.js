@@ -55,7 +55,6 @@ function PlansScreen() {
       const querySnapshot = await getDocs(customerRef);
 
       querySnapshot.forEach(async (subscription) => {
-        // need to test this out:
         setSubscription({
           role: subscription.data().role,
           current_period_end: subscription.data().current_period_end.seconds,
