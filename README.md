@@ -12,9 +12,13 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 ![ThrMovieDatabase](https://img.shields.io/badge/Tool-TMDB%20API-E50914?style=flat&logo=TheMovieDatabase)
 ![Javascript](https://img.shields.io/badge/Code-Javascript-E50914?style=flat&logo=Javascript)
 
-# Getting Started with Create React App and Redux
+# This is a React, Redux, and Firebase App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+[Firebase Firestore](https://firebase.google.com/?hl=en&authuser=0) was used for the backend server and [Firebase Authentication](https://firebase.google.com/docs/auth) was used for creating and logging into accounts. 
+
+Third party services APIs include [Stripe](https://stripe.com/docs) for payment and [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) for lists of movies and their genres.
 
 ## Available Scripts
 
