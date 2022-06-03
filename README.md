@@ -6,7 +6,11 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 
 ![React](https://img.shields.io/badge/Tool-React-E50914?style=flat&logo=React)
 ![Redux](https://img.shields.io/badge/Tool-Redux-E50914?style=flat&logo=Redux)
-![Firebase](https://img.shields.io/badge/Tool-Firebase-Firestore-E50914?style=flat&logo=Firebase)
+![Firebase](https://img.shields.io/badge/Tool-Firebase%20Firestore-E50914?style=flat&logo=Firebase)
+![Firebase](https://img.shields.io/badge/Tool-Firebase%20Authentication-E50914?style=flat&logo=Firebase)
+![Stripe](https://img.shields.io/badge/Tool-Stripe-E50914?style=flat&logo=Stripe)
+![ThrMovieDatabase](https://img.shields.io/badge/Tool-TMDB%20API-E50914?style=flat&logo=TheMovieDatabase)
+![Javascript](https://img.shields.io/badge/Code-Javascript-E50914?style=flat&logo=Javascript)
 
 # Getting Started with Create React App and Redux
 
