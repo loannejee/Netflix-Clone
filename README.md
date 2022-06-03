@@ -4,7 +4,7 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 
 ### :wrench: Technologies & Tools
 
-![React](https://img.shields.io/badge/Tool-React-<COLOR>?style=flat&logo=React)
+![React](https://img.shields.io/badge/Tool-React-#E50914?style=flat&logo=React)
 
 # Getting Started with Create React App and Redux
 
