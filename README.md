@@ -11,6 +11,7 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 ![Stripe](https://img.shields.io/badge/Tool-Stripe-E50914?style=flat&logo=Stripe)
 ![ThrMovieDatabase](https://img.shields.io/badge/Tool-TMDB%20API-E50914?style=flat&logo=TheMovieDatabase)
 ![Javascript](https://img.shields.io/badge/Code-Javascript-E50914?style=flat&logo=Javascript)
+![VisualStudioCode](https://img.shields.io/badge/Tool-VS%20Code-E50914?style=flat&logo=VisualStudioCode)
 
 ## This is a React, Redux, and Firebase App
 
