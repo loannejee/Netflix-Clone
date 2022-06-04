@@ -16,9 +16,13 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-[Firebase Firestore](https://firebase.google.com/?hl=en&authuser=0) was used for the backend server and [Firebase Authentication](https://firebase.google.com/docs/auth) was used for creating and logging into accounts. 
+[Firebase Firestore](https://firebase.google.com/?hl=en&authuser=0) (version 9) was used for the backend server and [Firebase Authentication](https://firebase.google.com/docs/auth) was used for creating and signing into accounts. 
 
-Third party services APIs include [Stripe](https://stripe.com/docs) for payment and [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) for lists of movies and their genres.
+Third party services APIs include [Stripe](https://stripe.com/docs) for payment and [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) for lists of movies with their genres and descriptions.
+
+### :computer: Demo
+
+
 
 ## Available Scripts
 
