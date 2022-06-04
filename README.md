@@ -24,6 +24,10 @@ Third party services APIs include [Stripe](https://stripe.com/docs) for payment 
 
 
 
+https://user-images.githubusercontent.com/95735163/172009538-2cb77587-fb1d-4f4f-9136-3b795deeec0d.mp4
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
