@@ -1,5 +1,4 @@
 # Netflix Clone
-------
 
 Project Deployment Link: https://netflix-clone-3e22a.web.app/ 
 
