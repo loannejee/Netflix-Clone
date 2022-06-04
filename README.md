@@ -13,8 +13,7 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 ![ThrMovieDatabase](https://img.shields.io/badge/Tool-TMDB%20API-E50914?style=flat&logo=TheMovieDatabase)
 ![Javascript](https://img.shields.io/badge/Code-Javascript-E50914?style=flat&logo=Javascript)
 
-# This is a React, Redux, and Firebase App
-------
+## This is a React, Redux, and Firebase App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
