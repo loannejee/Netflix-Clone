@@ -3,7 +3,7 @@
 Project Deployment Link: https://netflix-clone-3e22a.web.app/ 
 
 ### :wrench: Technologies & Tools
-------
+======
 
 ![React](https://img.shields.io/badge/Tool-React-E50914?style=flat&logo=React)
 ![Redux](https://img.shields.io/badge/Tool-Redux-E50914?style=flat&logo=Redux)
