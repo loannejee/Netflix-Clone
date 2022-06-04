@@ -1,9 +1,10 @@
 # Netflix Clone
+------
 
 Project Deployment Link: https://netflix-clone-3e22a.web.app/ 
 
 ### :wrench: Technologies & Tools
-======
+------
 
 ![React](https://img.shields.io/badge/Tool-React-E50914?style=flat&logo=React)
 ![Redux](https://img.shields.io/badge/Tool-Redux-E50914?style=flat&logo=Redux)
@@ -14,6 +15,7 @@ Project Deployment Link: https://netflix-clone-3e22a.web.app/
 ![Javascript](https://img.shields.io/badge/Code-Javascript-E50914?style=flat&logo=Javascript)
 
 # This is a React, Redux, and Firebase App
+------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
@@ -30,6 +32,7 @@ https://user-images.githubusercontent.com/95735163/172009538-2cb77587-fb1d-4f4f-
 
 
 ## Available Scripts
+------
 
 In the project directory, you can run:
 
@@ -67,6 +70,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
+------
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
