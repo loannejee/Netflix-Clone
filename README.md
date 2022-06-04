@@ -3,6 +3,7 @@
 Project Deployment Link: https://netflix-clone-3e22a.web.app/ 
 
 ### :wrench: Technologies & Tools
+------
 
 ![React](https://img.shields.io/badge/Tool-React-E50914?style=flat&logo=React)
 ![Redux](https://img.shields.io/badge/Tool-Redux-E50914?style=flat&logo=Redux)
@@ -21,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Third party services APIs include [Stripe](https://stripe.com/docs) for payment and [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction) for lists of movies with their genres and descriptions.
 
 ### :computer: Demo
-
+------
 
 
 https://user-images.githubusercontent.com/95735163/172009538-2cb77587-fb1d-4f4f-9136-3b795deeec0d.mp4
