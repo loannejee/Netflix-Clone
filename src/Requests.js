@@ -2,6 +2,8 @@
 // REMEMBER: add new keys to package.json; refer to link above ^; You also need to re-launch the localhost ---> npm start
 import env from "react-dotenv";
 
+console.log('hiii')
+
 // Here are all the different endpoints for genres that TMDB can give us:
 // We need to append these endpoints to our baseURL.
 const requests = {
